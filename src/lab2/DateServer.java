@@ -1,5 +1,3 @@
-package lab2;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
@@ -15,6 +13,8 @@ public class DateServer {
 		while(true) {
 			
 			Socket client = sock.accept();
+
+			System.out.println("New client connected");
 			
 			PrintWriter pout = new PrintWriter(client.getOutputStream(),true);
 			
